@@ -1,0 +1,129 @@
+#include <iostream>
+#include <windows.h>
+#include <conio.h>
+#include <math.h>
+
+using namespace std;
+
+void Input();
+void OutputAlgb();
+void OutputPokz();
+void Sopryazhen();
+void StepenPolz();
+void Information();
+
+float x,i,y,fi;
+
+int main()
+{
+   SetConsoleCP(1251);
+   SetConsoleOutputCP(1251);
+  int exit = 0, choice = 0;
+
+	while (exit != 1)
+	{
+		cout << "\n\n\t\t\t\t\tMENU:\n";
+		cout << "1. Ввод комплексного числа\n";
+		cout << "2. Вывод комплексного числа в алгебраической форме.\n";
+		cout << "3. Вывод комплексного числа в показательной форме.\n";
+		cout << "4. Получение сопряжённого комплексного числа.\n";
+		cout << "5. Возведение комплексного числа в целую положительную степень.\n";
+		cout << "6. Информация о версии и авторе программы.\n";
+		cout << "7. Выход из программы.\n";
+
+		cout << "Выберите нужный пункт: ";
+		cin >> choice;
+
+		if (choice == 1)
+		{
+			Input();
+		}
+		else if (choice == 2)
+		{
+			OutputAlgb();
+		}
+		else if (choice == 3)
+		{
+			OutputPokz();
+		}
+		else if (choice == 4)
+		{
+			Sopryazhen();
+		}
+		else if (choice == 5)
+		{
+			StepenPolz();
+		}
+		else if (choice == 6)
+		{
+			Information();
+		}
+		if (choice == 7)
+		{
+			cout << "Выход из программы";
+			exit = 1;
+		}
+	}
+	getch();
+	return 0;
+}
+
+void Input()
+{
+  Input:
+  cout << "Введите действительную часть x:";
+  cin >> x;
+  cout << "Введите действительную часть y:";
+  cin >> y;
+  cout << "Введите мнимую единицу:";
+  cin >> i;
+  cout << "Введите угол fi:";
+  cin >> fi;
+}
+
+void OutputAlgb()
+{
+  float z;
+  z=x+i*y;
+  cout << "Комплексное число в алгебраической форме:" << z;
+}
+
+void OutputPokz()
+{
+  float z1;
+  z1=abs(x+i*y)*exp(i*fi);
+  cout << "Комплексное число в показательной форме:" << z1;
+}
+
+void Sopryazhen()
+{
+  float z;
+  z=x-i*y;
+  cout <<"Сопряжённое комплексное число:" << z;
+}
+
+void StepenPolz()
+{
+  int n;
+  float l;
+  cout<<"Введите степень n:";
+  cin>>n;
+  l=cos(fi*n)+i*sin(fi*n);
+  if(n>0) cout<<"Комплексное число в степени:"<<l;
+  else if(n<0) cout<<"Число возводиться не будет,т.к. степень отрицательная!";
+}
+
+void Information()
+{
+	cout << "\n\Автор: Жевняк Владислав\n";
+	cout << "Версия : 1.0.0.\n\n";
+}
+
+
+
+
+
+
+
+
+
