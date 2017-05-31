@@ -1,0 +1,47 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit2H
+#define Unit2H
+//---------------------------------------------------------------------------
+#include <Classes.hpp>
+#include <Controls.hpp>
+#include <StdCtrls.hpp>
+#include <Forms.hpp>
+#include <ExtCtrls.hpp>
+#include <jpeg.hpp>
+#include <Menus.hpp>
+#include <ActnList.hpp>
+#include <CategoryButtons.hpp>
+#include <ComCtrls.hpp>
+#include <MPlayer.hpp>
+#include <FileCtrl.hpp>
+#include <Dialogs.hpp>
+#include <ExtDlgs.hpp>
+#include <DB.hpp>
+//---------------------------------------------------------------------------
+class TPersonalTrainer : public TForm
+{
+__published:	// IDE-managed Components
+	TImage *Image1;
+	TButton *Button1;
+	TButton *Button2;
+	TButton *Button3;
+	TButton *Button4;
+	TButton *Button5;
+	TButton *Button6;
+	TButton *Button8;
+	TButton *Button9;
+	TLabel *Label1;
+	void __fastcall Button9Click(TObject *Sender);
+	void __fastcall N9Click(TObject *Sender);
+	void __fastcall N8Click(TObject *Sender);
+	void __fastcall Button8Click(TObject *Sender);
+	void __fastcall Button5Click(TObject *Sender);
+private:	// User declarations
+public:		// User declarations
+	__fastcall TPersonalTrainer(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TPersonalTrainer *PersonalTrainer;
+//---------------------------------------------------------------------------
+#endif
