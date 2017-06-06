@@ -111,7 +111,7 @@ void init_cwords(char** c_words, int* number)
 	char* input_string = new char[100];
 	char* separators = " ";
 
-	fopen_s(&file, "d:\\Work\\Programming\\lab4_2\\lab4_2\\lab4_2\\c_words.txt", "r");
+	fopen_s(&file, "d:\\Work\\Programming\\lab4_2\\lab4_2\\lab4_2\\words.txt", "r");
 	while (!feof(file))
 	{
 		fgets(input_string, 100, file);
