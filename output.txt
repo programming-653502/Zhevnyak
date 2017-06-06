@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+TYPEDEF STRUCT {INT x;} struct1;
+
+INT main()
+{
+	STATIC INT i;
+	scanf("%d", &i);
+	IF (i%2==0)
+		printf("%d", i);
+	ELSE
+		printf("%d", (INT)SIZEOF(i));
+	RETURN 0;
+}
